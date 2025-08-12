@@ -4,58 +4,61 @@ import { Search, User, Heart, ShoppingBag, Phone, MapPin, Video, Truck, Shield, 
 function App() {
   return (
     <div className="min-h-screen bg-white">
-      {/* Top Banner */}
-      <div className="bg-teal-700 text-white text-center py-2 text-sm font-normal">
-        Free Shipping & 30 Day Returns
-      </div>
-
       {/* Header */}
       <header className="border-b border-gray-200">
-        {/* Top bar */}
-        <div className="bg-gray-50 px-4 py-2">
-          <div className="max-w-7xl mx-auto flex justify-between items-center text-sm text-gray-600">
+        {/* Single header bar */}
+        <div className="px-4 py-3">
+          <div className="max-w-7xl mx-auto flex justify-between items-center">
+            {/* Left side - Contact info */}
             <div className="flex items-center space-x-6">
               <div className="flex items-center space-x-2">
-                <Phone className="w-4 h-4" />
-                <span>1.415.426.2781</span>
+                <span className="text-sm text-gray-600">1.415.426.2781</span>
               </div>
               <div className="flex items-center space-x-2">
-                <MapPin className="w-4 h-4" />
-                <span>Stores</span>
+                <span className="text-sm text-gray-600">Stores</span>
               </div>
               <div className="flex items-center space-x-2">
-                <Video className="w-4 h-4" />
-                <span>Virtual Appointment</span>
+                <div className="flex items-center space-x-1">
+                  <div className="w-4 h-4 border border-gray-400 rounded flex items-center justify-center">
+                    <Video className="w-2.5 h-2.5 text-gray-600" />
+                  </div>
+                  <span className="text-sm text-gray-600">Virtual Appointment</span>
+                </div>
               </div>
             </div>
+            
+            {/* Center - Logo */}
+            <div className="flex items-center">
+              <h1 className="text-xl font-normal tracking-[0.15em] text-gray-900" style={{ fontFamily: 'system-ui, -apple-system, sans-serif' }}>BRILLIANT EARTH</h1>
+              <div className="ml-1 text-gray-400">|</div>
+              <span className="ml-2 text-sm text-gray-600 font-light" style={{ fontFamily: 'Georgia, serif', fontStyle: 'italic' }}>20 Years of Yes</span>
+            </div>
+            
+            {/* Right side - Icons and VND */}
             <div className="flex items-center space-x-4">
-              <Search className="w-4 h-4 cursor-pointer hover:text-gray-800" />
-              <User className="w-4 h-4 cursor-pointer hover:text-gray-800" />
-              <Heart className="w-4 h-4 cursor-pointer hover:text-gray-800" />
-              <ShoppingBag className="w-4 h-4 cursor-pointer hover:text-gray-800" />
-              <span className="text-red-600 font-medium">🇻🇳 VND</span>
+              <Search className="w-4 h-4 cursor-pointer hover:text-gray-800 text-gray-600" />
+              <User className="w-4 h-4 cursor-pointer hover:text-gray-800 text-gray-600" />
+              <Heart className="w-4 h-4 cursor-pointer hover:text-gray-800 text-gray-600" />
+              <ShoppingBag className="w-4 h-4 cursor-pointer hover:text-gray-800 text-gray-600" />
+              <div className="flex items-center space-x-1">
+                <span className="w-4 h-4 text-red-500 text-xs">🇻🇳</span>
+                <span className="text-sm text-gray-900 font-medium">VND</span>
+              </div>
             </div>
           </div>
         </div>
         
-        {/* Main header */}
-        <div className="px-4 py-4">
-          <div className="max-w-7xl mx-auto flex justify-between items-center">
-            <div className="flex items-center">
-              <h1 className="text-2xl font-light tracking-[0.2em] text-gray-900">BRILLIANT EARTH</h1>
-              <span className="ml-6 text-sm italic text-gray-600 font-light">20 Years of Yes</span>
-            </div>
-            
-            <nav className="hidden md:flex items-center space-x-8 text-sm font-normal text-gray-700 tracking-wide">
-              <a href="#" className="hover:text-gray-900 transition-colors">ENGAGEMENT RINGS</a>
-              <a href="#" className="hover:text-gray-900 transition-colors">WEDDING RINGS</a>
-              <a href="#" className="hover:text-gray-900 transition-colors">DIAMONDS</a>
-              <a href="#" className="hover:text-gray-900 transition-colors">GEMSTONES</a>
-              <a href="#" className="hover:text-gray-900 transition-colors">JEWELRY</a>
-              <a href="#" className="hover:text-gray-900 transition-colors">GIFTS</a>
-              <a href="#" className="hover:text-gray-900 transition-colors">ABOUT</a>
-            </nav>
-          </div>
+        {/* Navigation */}
+        <div className="border-t border-gray-100 px-4 py-3">
+          <nav className="max-w-7xl mx-auto flex justify-center items-center space-x-12 text-sm font-normal text-gray-700 tracking-wide">
+            <a href="#" className="hover:text-gray-900 transition-colors">ENGAGEMENT RINGS</a>
+            <a href="#" className="hover:text-gray-900 transition-colors">WEDDING RINGS</a>
+            <a href="#" className="hover:text-gray-900 transition-colors">DIAMONDS</a>
+            <a href="#" className="hover:text-gray-900 transition-colors">GEMSTONES</a>
+            <a href="#" className="hover:text-gray-900 transition-colors">JEWELRY</a>
+            <a href="#" className="hover:text-gray-900 transition-colors">GIFTS</a>
+            <a href="#" className="hover:text-gray-900 transition-colors">ABOUT</a>
+          </nav>
         </div>
       </header>
 
