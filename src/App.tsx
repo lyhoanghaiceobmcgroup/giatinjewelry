@@ -1,7 +1,9 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Search, User, Heart, ShoppingBag, Phone, MapPin, Video, Truck, Shield, MessageCircle, Diamond, RotateCcw, ChevronRight, Play } from 'lucide-react';
 
 function App() {
+  const [isEngagementDropdownOpen, setIsEngagementDropdownOpen] = useState(false);
+
   return (
     <div className="min-h-screen bg-white">
       {/* Header */}
@@ -49,9 +51,107 @@ function App() {
         </div>
         
         {/* Navigation */}
-        <div className="border-t border-gray-100 px-4 py-3">
+        <div className="border-t border-gray-100 px-4 py-3 relative">
           <nav className="max-w-7xl mx-auto flex justify-center items-center space-x-12 text-sm font-normal text-gray-700 tracking-wide">
-            <a href="#" className="hover:text-gray-900 transition-colors">ENGAGEMENT RINGS</a>
+            <div 
+              className="relative"
+              onMouseEnter={() => setIsEngagementDropdownOpen(true)}
+              onMouseLeave={() => setIsEngagementDropdownOpen(false)}
+            >
+              <a href="#" className="hover:text-gray-900 transition-colors">
+                ENGAGEMENT RINGS
+              </a>
+              
+              {/* Dropdown Menu */}
+              {isEngagementDropdownOpen && (
+                <div className="absolute top-full left-0 right-0 mt-2 w-screen bg-white border-t border-gray-200 shadow-lg z-50" style={{marginLeft: 'calc(-50vw + 50%)', marginRight: 'calc(-50vw + 50%)'}}>
+                    <div className="w-full grid grid-cols-4 gap-8 px-4 py-8">
+                    {/* Design Your Own Engagement Ring */}
+                    <div>
+                      <h3 className="text-sm font-semibold text-gray-900 mb-4 tracking-wide">DESIGN YOUR OWN ENGAGEMENT RING</h3>
+                      <ul className="space-y-2 text-sm text-gray-600">
+                        <li><a href="#" className="hover:text-gray-900 transition-colors flex items-center"><span className="mr-2">💍</span>Start with a Setting</a></li>
+                        <li><a href="#" className="hover:text-gray-900 transition-colors flex items-center"><span className="mr-2">💎</span>Start with a Natural Diamond</a></li>
+                        <li><a href="#" className="hover:text-gray-900 transition-colors flex items-center"><span className="mr-2">🔬</span>Start with a Lab Grown Diamond</a></li>
+                        <li><a href="#" className="hover:text-gray-900 transition-colors flex items-center"><span className="mr-2">💠</span>Start with a Gemstone</a></li>
+                        <li><a href="#" className="hover:text-gray-900 transition-colors flex items-center"><span className="mr-2">💒</span>Start with a Bridal Set</a></li>
+                      </ul>
+                      
+                      <h4 className="text-sm font-semibold text-gray-900 mb-3 mt-6 tracking-wide">SHOP BY SHAPE</h4>
+                      <div className="grid grid-cols-3 gap-2 text-xs text-gray-600">
+                        <a href="#" className="hover:text-gray-900 transition-colors">Oval</a>
+                        <a href="#" className="hover:text-gray-900 transition-colors">Marquise</a>
+                        <a href="#" className="hover:text-gray-900 transition-colors">Emerald</a>
+                        <a href="#" className="hover:text-gray-900 transition-colors">Radiant</a>
+                        <a href="#" className="hover:text-gray-900 transition-colors">Round</a>
+                        <a href="#" className="hover:text-gray-900 transition-colors">Cushion</a>
+                        <a href="#" className="hover:text-gray-900 transition-colors">Pear</a>
+                        <a href="#" className="hover:text-gray-900 transition-colors">Princess</a>
+                        <a href="#" className="hover:text-gray-900 transition-colors">Asscher</a>
+                        <a href="#" className="hover:text-gray-900 transition-colors">Heart</a>
+                      </div>
+                      <a href="#" className="text-xs text-teal-600 hover:text-teal-800 transition-colors mt-2 inline-block">Shop All Engagement Rings &gt;</a>
+                    </div>
+                    
+                    {/* Engagement Ring Styles */}
+                    <div>
+                      <h3 className="text-sm font-semibold text-gray-900 mb-4 tracking-wide">ENGAGEMENT RING STYLES</h3>
+                      <ul className="space-y-2 text-sm text-gray-600">
+                        <li><a href="#" className="hover:text-gray-900 transition-colors">Solitaire</a></li>
+                        <li><a href="#" className="hover:text-gray-900 transition-colors">Three Stone</a></li>
+                        <li><a href="#" className="hover:text-gray-900 transition-colors">Nature Inspired</a></li>
+                        <li><a href="#" className="hover:text-gray-900 transition-colors">Hidden Halo</a></li>
+                        <li><a href="#" className="hover:text-gray-900 transition-colors">Halo</a></li>
+                      </ul>
+                      
+                      <h4 className="text-sm font-semibold text-gray-900 mb-3 mt-6 tracking-wide">GEMSTONE ENGAGEMENT RINGS</h4>
+                      <ul className="space-y-2 text-sm text-gray-600">
+                        <li><a href="#" className="hover:text-gray-900 transition-colors">Moissanite</a></li>
+                        <li><a href="#" className="hover:text-gray-900 transition-colors">Sapphire</a></li>
+                        <li><a href="#" className="hover:text-gray-900 transition-colors">Emerald</a></li>
+                        <li><a href="#" className="hover:text-gray-900 transition-colors">Aquamarine</a></li>
+                        <li><a href="#" className="hover:text-gray-900 transition-colors">Morganite</a></li>
+                      </ul>
+                    </div>
+                    
+                    {/* Featured */}
+                    <div>
+                      <h3 className="text-sm font-semibold text-gray-900 mb-4 tracking-wide">FEATURED</h3>
+                      <ul className="space-y-2 text-sm text-gray-600">
+                        <li><a href="#" className="hover:text-gray-900 transition-colors">Ready to Ship Engagement Rings</a></li>
+                        <li><a href="#" className="hover:text-gray-900 transition-colors">Top 20 Engagement Rings</a></li>
+                        <li><a href="#" className="hover:text-gray-900 transition-colors">Signature Collections</a></li>
+                        <li><a href="#" className="hover:text-gray-900 transition-colors">20th Anniversary Collection</a></li>
+                        <li><a href="#" className="hover:text-gray-900 transition-colors">Men's Engagement Rings</a></li>
+                        <li><a href="#" className="hover:text-gray-900 transition-colors">Custom Engagement Rings</a></li>
+                        <li><a href="#" className="hover:text-gray-900 transition-colors">Petite Collection</a></li>
+                      </ul>
+                    </div>
+                    
+                    {/* The Brilliant Earth Difference */}
+                    <div>
+                      <h3 className="text-sm font-semibold text-gray-900 mb-4 tracking-wide">THE BRILLIANT EARTH DIFFERENCE</h3>
+                      <ul className="space-y-2 text-sm text-gray-600">
+                        <li><a href="#" className="hover:text-gray-900 transition-colors">We've Got You Covered</a></li>
+                        <li><a href="#" className="hover:text-gray-900 transition-colors">Diamond Transparency</a></li>
+                        <li><a href="#" className="hover:text-gray-900 transition-colors">Responsibly Gold</a></li>
+                        <li><a href="#" className="hover:text-gray-900 transition-colors">20 Years of Diamond Innovation</a></li>
+                        <li><a href="#" className="hover:text-gray-900 transition-colors">Our Mission</a></li>
+                      </ul>
+                      
+                      <h4 className="text-sm font-semibold text-gray-900 mb-3 mt-6 tracking-wide">ENGAGEMENT RING GUIDES</h4>
+                      <ul className="space-y-2 text-sm text-gray-600">
+                        <li><a href="#" className="hover:text-gray-900 transition-colors">Engagement Ring Style Guide</a></li>
+                        <li><a href="#" className="hover:text-gray-900 transition-colors">How Much to Spend on an Engagement Ring</a></li>
+                        <li><a href="#" className="hover:text-gray-900 transition-colors">Is Platinum Better Than Gold?</a></li>
+                        <li><a href="#" className="hover:text-gray-900 transition-colors">Free Ring Sizer</a></li>
+                        <li><a href="#" className="hover:text-gray-900 transition-colors">2024 Engagement Ring Trends</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              )}
+            </div>
             <a href="#" className="hover:text-gray-900 transition-colors">WEDDING RINGS</a>
             <a href="#" className="hover:text-gray-900 transition-colors">DIAMONDS</a>
             <a href="#" className="hover:text-gray-900 transition-colors">GEMSTONES</a>
