@@ -4,6 +4,11 @@ import { Search, User, Heart, ShoppingBag, Phone, MapPin, Video, Truck, Shield, 
 function App() {
   return (
     <div className="min-h-screen bg-white">
+      {/* Top Banner */}
+      <div className="bg-teal-700 text-white text-center py-2 text-sm font-normal">
+        Free Shipping & 30 Day Returns
+      </div>
+
       {/* Header */}
       <header className="border-b border-gray-200">
         {/* Top bar */}
@@ -93,7 +98,7 @@ function App() {
           
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
             {[
-              { name: 'Engagement Rings', image: 'https://images.pexels.com/photos/1232931/pexels-photo-1232931.jpeg?auto=compress&cs=tinysrgb&w=300' },
+              { name: 'Engagement Rings', image: 'https://images.pexels.com/photos/265906/pexels-photo-265906.jpeg?auto=compress&cs=tinysrgb&w=300' },
               { name: "Women's Wedding Rings", image: 'https://images.pexels.com/photos/1232931/pexels-photo-1232931.jpeg?auto=compress&cs=tinysrgb&w=300' },
               { name: "Men's Wedding Rings", image: 'https://images.pexels.com/photos/1232931/pexels-photo-1232931.jpeg?auto=compress&cs=tinysrgb&w=300' },
               { name: 'Gemstone Rings', image: 'https://images.pexels.com/photos/1232931/pexels-photo-1232931.jpeg?auto=compress&cs=tinysrgb&w=300' },
@@ -124,7 +129,7 @@ function App() {
               <div className="bg-white rounded-lg p-8">
                 <div className="w-48 h-48 mx-auto bg-gradient-to-br from-gray-100 to-gray-200 rounded-full flex items-center justify-center mb-8">
                   <img 
-                    src="https://images.pexels.com/photos/1232931/pexels-photo-1232931.jpeg?auto=compress&cs=tinysrgb&w=200" 
+                    src="https://images.pexels.com/photos/265906/pexels-photo-265906.jpeg?auto=compress&cs=tinysrgb&w=200" 
                     alt="Diamond Ring"
                     className="w-32 h-32 object-cover rounded-full"
                   />
@@ -157,9 +162,9 @@ function App() {
           
           <div className="grid md:grid-cols-4 gap-8 mb-16">
             {[
-              { name: 'Solitaire Rings', image: 'https://images.pexels.com/photos/1232931/pexels-photo-1232931.jpeg?auto=compress&cs=tinysrgb&w=400' },
+              { name: 'Solitaire Rings', image: 'https://images.pexels.com/photos/265906/pexels-photo-265906.jpeg?auto=compress&cs=tinysrgb&w=400' },
               { name: 'Nature Inspired Rings', image: 'https://images.pexels.com/photos/1232931/pexels-photo-1232931.jpeg?auto=compress&cs=tinysrgb&w=400' },
-              { name: 'Three Stone Rings', image: 'https://images.pexels.com/photos/1232931/pexels-photo-1232931.jpeg?auto=compress&cs=tinysrgb&w=400' },
+              { name: 'Three Stone Rings', image: 'https://images.pexels.com/photos/265906/pexels-photo-265906.jpeg?auto=compress&cs=tinysrgb&w=400' },
               { name: 'Bridal Sets', image: 'https://images.pexels.com/photos/1232931/pexels-photo-1232931.jpeg?auto=compress&cs=tinysrgb&w=400' }
             ].map((item, index) => (
               <div key={index} className="group cursor-pointer">
@@ -180,7 +185,7 @@ function App() {
               <h3 className="text-2xl font-light text-gray-900 mb-4 tracking-wide" style={{ fontFamily: 'Georgia, serif' }}>Our Must-Have Rings</h3>
               <div className="h-48 bg-sage-100 rounded-lg overflow-hidden">
                 <img 
-                  src="https://images.pexels.com/photos/1232931/pexels-photo-1232931.jpeg?auto=compress&cs=tinysrgb&w=600" 
+                  src="https://images.pexels.com/photos/265906/pexels-photo-265906.jpeg?auto=compress&cs=tinysrgb&w=600" 
                   alt="Must-Have Rings"
                   className="w-full h-full object-cover"
                 />
@@ -350,21 +355,28 @@ function App() {
           </div>
           
           <div className="grid grid-cols-2 md:grid-cols-6 gap-4">
-            {[1, 2, 3, 4, 5, 6].map((item, index) => (
+            {[
+              { image: 'https://images.pexels.com/photos/265906/pexels-photo-265906.jpeg?auto=compress&cs=tinysrgb&w=300&h=300&fit=crop', hasVideo: false },
+              { image: 'https://images.pexels.com/photos/1232931/pexels-photo-1232931.jpeg?auto=compress&cs=tinysrgb&w=300&h=300&fit=crop', hasVideo: true },
+              { image: 'https://images.pexels.com/photos/265906/pexels-photo-265906.jpeg?auto=compress&cs=tinysrgb&w=300&h=300&fit=crop', hasVideo: true },
+              { image: 'https://images.pexels.com/photos/1232931/pexels-photo-1232931.jpeg?auto=compress&cs=tinysrgb&w=300&h=300&fit=crop', hasVideo: false, hasShopNow: true },
+              { image: 'https://images.pexels.com/photos/265906/pexels-photo-265906.jpeg?auto=compress&cs=tinysrgb&w=300&h=300&fit=crop', hasVideo: true },
+              { image: 'https://images.pexels.com/photos/1232931/pexels-photo-1232931.jpeg?auto=compress&cs=tinysrgb&w=300&h=300&fit=crop', hasVideo: true }
+            ].map((item, index) => (
               <div key={index} className="relative group cursor-pointer">
                 <div className="aspect-square bg-gray-100 rounded-lg overflow-hidden">
                   <img 
-                    src={`https://images.pexels.com/photos/1232931/pexels-photo-1232931.jpeg?auto=compress&cs=tinysrgb&w=300&h=300&fit=crop`} 
-                    alt={`Instagram post ${item}`}
+                    src={item.image} 
+                    alt={`Instagram post ${index + 1}`}
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                   />
                 </div>
-                {index === 1 || index === 2 || index === 4 || index === 5 ? (
+                {item.hasVideo && (
                   <div className="absolute top-2 right-2">
                     <Play className="w-4 h-4 text-white" />
                   </div>
-                ) : null}
-                {index === 3 && (
+                )}
+                {item.hasShopNow && (
                   <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center rounded-lg">
                     <button className="bg-white text-gray-900 px-4 py-2 text-sm font-normal tracking-wide hover:bg-gray-100 transition-colors">
                       Shop Now
