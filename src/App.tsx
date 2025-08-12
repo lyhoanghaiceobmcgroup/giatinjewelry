@@ -67,7 +67,7 @@ function App() {
         <div className="grid md:grid-cols-2">
           {/* Easy Yes */}
           <div className="relative h-96 md:h-[500px] bg-cover bg-center" style={{
-            backgroundImage: 'url("https://images.pexels.com/photos/1232931/pexels-photo-1232931.jpeg?auto=compress&cs=tinysrgb&w=800")'
+            backgroundImage: 'url("/HeroSection/1.webp")'
           }}>
             <div className="absolute inset-0 bg-black bg-opacity-30"></div>
             <div className="absolute inset-0 flex flex-col justify-center items-center text-center text-white">
@@ -80,7 +80,7 @@ function App() {
           
           {/* All Stacked Up */}
           <div className="relative h-96 md:h-[500px] bg-cover bg-center" style={{
-            backgroundImage: 'url("https://images.pexels.com/photos/1232931/pexels-photo-1232931.jpeg?auto=compress&cs=tinysrgb&w=800")'
+            backgroundImage: 'url("/HeroSection/2.webp")'
           }}>
             <div className="absolute inset-0 bg-black bg-opacity-20"></div>
             <div className="absolute inset-0 flex flex-col justify-center items-center text-center">
@@ -101,19 +101,24 @@ function App() {
           
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
             {[
-              { name: 'Engagement Rings', image: 'https://images.pexels.com/photos/265906/pexels-photo-265906.jpeg?auto=compress&cs=tinysrgb&w=300' },
-              { name: "Women's Wedding Rings", image: 'https://images.pexels.com/photos/1232931/pexels-photo-1232931.jpeg?auto=compress&cs=tinysrgb&w=300' },
-              { name: "Men's Wedding Rings", image: 'https://images.pexels.com/photos/1232931/pexels-photo-1232931.jpeg?auto=compress&cs=tinysrgb&w=300' },
-              { name: 'Gemstone Rings', image: 'https://images.pexels.com/photos/1232931/pexels-photo-1232931.jpeg?auto=compress&cs=tinysrgb&w=300' },
-              { name: 'Fine Jewelry', image: 'https://images.pexels.com/photos/1232931/pexels-photo-1232931.jpeg?auto=compress&cs=tinysrgb&w=300' },
-              { name: 'Best Sellers', image: 'https://images.pexels.com/photos/1232931/pexels-photo-1232931.jpeg?auto=compress&cs=tinysrgb&w=300' }
+              { name: 'Engagement Rings', image: '/ShopJewelrybyCategory/1.JPG', hoverImage: '/ShopJewelrybyCategory/1a.JPG' },
+              { name: "Women's Wedding Rings", image: '/ShopJewelrybyCategory/2.JPG', hoverImage: '/ShopJewelrybyCategory/2a.jpg' },
+              { name: "Men's Wedding Rings", image: '/ShopJewelrybyCategory/3.JPG', hoverImage: '/ShopJewelrybyCategory/3a.JPG' },
+              { name: 'Gemstone Rings', image: '/ShopJewelrybyCategory/4.JPG', hoverImage: '/ShopJewelrybyCategory/4a.JPG' },
+              { name: 'Fine Jewelry', image: '/ShopJewelrybyCategory/5.JPG', hoverImage: '/ShopJewelrybyCategory/5a.JPG' },
+              { name: 'Best Sellers', image: '/ShopJewelrybyCategory/6.JPG', hoverImage: '/ShopJewelrybyCategory/6a.JPG' }
             ].map((item, index) => (
               <div key={index} className="group cursor-pointer">
-                <div className="h-48 bg-gray-100 rounded-lg mb-4 overflow-hidden">
+                <div className="h-48 bg-gray-100 rounded-lg mb-4 overflow-hidden relative">
                   <img 
                     src={item.image} 
                     alt={item.name}
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                    className="w-full h-full object-cover transition-opacity duration-300 group-hover:opacity-0"
+                  />
+                  <img 
+                    src={item.hoverImage} 
+                    alt={item.name}
+                    className="w-full h-full object-cover absolute inset-0 opacity-0 transition-opacity duration-300 group-hover:opacity-100"
                   />
                 </div>
                 <h3 className="font-normal text-gray-900 group-hover:text-gray-600 transition-colors text-sm">{item.name}</h3>
