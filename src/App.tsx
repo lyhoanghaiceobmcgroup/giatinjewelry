@@ -10,10 +10,10 @@ function App() {
       {/* Header */}
       <header className="border-b border-gray-200">
         {/* Single header bar */}
-        <div className="px-4 py-3">
+        <div className="px-2 sm:px-4 py-3">
           <div className="max-w-7xl mx-auto flex justify-between items-center">
             {/* Left side - Contact info */}
-            <div className="flex items-center space-x-6">
+            <div className="hidden lg:flex items-center space-x-6">
               <div className="flex items-center space-x-2">
                 <span className="text-sm text-gray-600">1.415.426.2781</span>
               </div>
@@ -31,19 +31,19 @@ function App() {
             </div>
             
             {/* Center - Logo */}
-            <div className="flex items-center">
-              <h1 className="text-xl font-normal tracking-[0.15em] text-gray-900" style={{ fontFamily: 'system-ui, -apple-system, sans-serif' }}>GAJ JEWELRY</h1>
+            <div className="flex items-center flex-1 lg:flex-none justify-center lg:justify-start">
+              <h1 className="text-lg sm:text-xl font-normal tracking-[0.15em] text-gray-900" style={{ fontFamily: 'system-ui, -apple-system, sans-serif' }}>GAJ JEWELRY</h1>
               <div className="ml-1 text-gray-400">|</div>
-              <span className="ml-2 text-sm text-gray-600 font-light" style={{ fontFamily: 'Georgia, serif', fontStyle: 'italic' }}>20 Years of Yes</span>
+              <span className="ml-2 text-xs sm:text-sm text-gray-600 font-light" style={{ fontFamily: 'Georgia, serif', fontStyle: 'italic' }}>20 Years of Yes</span>
             </div>
             
             {/* Right side - Icons and VND */}
-            <div className="flex items-center space-x-4">
+            <div className="flex items-center space-x-2 sm:space-x-4">
               <Search className="w-4 h-4 cursor-pointer hover:text-gray-800 text-gray-600" />
               <User className="w-4 h-4 cursor-pointer hover:text-gray-800 text-gray-600" />
               <Heart className="w-4 h-4 cursor-pointer hover:text-gray-800 text-gray-600" />
               <ShoppingBag className="w-4 h-4 cursor-pointer hover:text-gray-800 text-gray-600" />
-              <div className="flex items-center space-x-1">
+              <div className="hidden sm:flex items-center space-x-1">
                 <span className="w-4 h-4 text-red-500 text-xs">🇻🇳</span>
                 <span className="text-sm text-gray-900 font-medium">VND</span>
               </div>
@@ -52,8 +52,8 @@ function App() {
         </div>
         
         {/* Navigation */}
-        <div className="border-t border-gray-100 px-4 py-3 relative">
-          <nav className="max-w-7xl mx-auto flex justify-center items-center space-x-12 text-sm font-normal text-gray-700 tracking-wide">
+        <div className="border-t border-gray-100 px-2 sm:px-4 py-3 relative overflow-x-auto">
+          <nav className="max-w-7xl mx-auto flex justify-center items-center space-x-4 sm:space-x-8 lg:space-x-12 text-xs sm:text-sm font-normal text-gray-700 tracking-wide whitespace-nowrap">
             <div 
               className="relative"
               onMouseEnter={() => setIsEngagementDropdownOpen(true)}
@@ -66,7 +66,7 @@ function App() {
               {/* Dropdown Menu */}
               {isEngagementDropdownOpen && (
                 <div className="absolute top-full left-0 right-0 mt-2 w-screen bg-white border-t border-gray-200 shadow-lg z-50" style={{marginLeft: 'calc(-50vw + 50%)', marginRight: 'calc(-50vw + 50%)'}}>
-                    <div className="w-full grid grid-cols-4 gap-8 px-4 py-8">
+                    <div className="w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 lg:gap-8 px-4 py-6 sm:py-8">
                     {/* Design Your Own Engagement Ring */}
                     <div>
                       <h3 className="text-sm font-semibold text-gray-900 mb-4 tracking-wide">DESIGN YOUR OWN ENGAGEMENT RING</h3>
@@ -165,7 +165,7 @@ function App() {
               {/* Wedding Rings Dropdown Menu */}
               {isWeddingDropdownOpen && (
                 <div className="absolute top-full left-0 right-0 mt-2 w-screen bg-white border-t border-gray-200 shadow-lg z-50" style={{marginLeft: 'calc(-50vw + 50%)', marginRight: 'calc(-50vw + 50%)'}}>
-                    <div className="w-full grid grid-cols-4 gap-8 px-4 py-8">
+                    <div className="w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 lg:gap-8 px-4 py-6 sm:py-8">
                     {/* Women's Wedding Rings */}
                     <div>
                       <h3 className="text-sm font-semibold text-gray-900 mb-4 tracking-wide">WOMEN</h3>
@@ -207,7 +207,7 @@ function App() {
                         <li><a href="#" className="hover:text-gray-900 transition-colors">Rose Gold</a></li>
                       </ul>
                       
-                      <h4 className="text-sm font-semibold text-gray-900 mb-3 mt-6 tracking-wide">MEN'S BY METAL</h4>
+                      <h4 className="text-sm font-semibold text-gray-900 mb-3 mt-6 tracking-wide">MEN'S BY METAL</h3>
                       <ul className="space-y-2 text-sm text-gray-600">
                         <li><a href="#" className="hover:text-gray-900 transition-colors">Platinum</a></li>
                         <li><a href="#" className="hover:text-gray-900 transition-colors">Yellow Gold</a></li>
@@ -282,12 +282,12 @@ function App() {
       </section>
 
       {/* Shop Jewelry by Category */}
-      <section className="py-16 px-4">
+      <section className="py-8 sm:py-12 lg:py-16 px-4">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl font-light text-gray-900 mb-4 tracking-wide" style={{ fontFamily: 'Georgia, serif' }}>Shop Jewelry by Category</h2>
-          <p className="text-gray-600 mb-12 font-light">Thoughtfully designed collections for the big day and every day.</p>
+          <h2 className="text-2xl sm:text-3xl font-light text-gray-900 mb-4 tracking-wide text-center" style={{ fontFamily: 'Georgia, serif' }}>Shop Jewelry by Category</h2>
+          <p className="text-gray-600 mb-8 sm:mb-12 font-light text-center">Thoughtfully designed collections for the big day and every day.</p>
           
-          <div className="grid grid-cols-6 gap-6">
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4 sm:gap-6">
             {[
               { name: 'Engagement Rings', image: '/ShopJewelrybyCategory/1.JPG', hoverImage: '/ShopJewelrybyCategory/1a.JPG' },
               { name: "Women's Wedding Rings", image: '/ShopJewelrybyCategory/2.JPG', hoverImage: '/ShopJewelrybyCategory/2a.jpg' },
@@ -297,7 +297,7 @@ function App() {
               { name: 'Best Sellers', image: '/ShopJewelrybyCategory/6.JPG', hoverImage: '/ShopJewelrybyCategory/6a.JPG' }
             ].map((item, index) => (
               <div key={index} className="group cursor-pointer">
-                <div className="h-80 md:h-96 bg-gray-100 rounded-lg mb-4 overflow-hidden relative">
+                <div className="h-48 sm:h-64 md:h-80 lg:h-96 bg-gray-100 rounded-lg mb-4 overflow-hidden relative">
                   <img 
                     src={item.image} 
                     alt={item.name}
@@ -309,7 +309,7 @@ function App() {
                     className="w-full h-full object-cover absolute inset-0 opacity-0 transition-opacity duration-300 group-hover:opacity-100"
                   />
                 </div>
-                <h3 className="font-normal text-gray-900 group-hover:text-gray-600 transition-colors text-sm">{item.name}</h3>
+                <h3 className="font-normal text-gray-900 group-hover:text-gray-600 transition-colors text-xs sm:text-sm text-center">{item.name}</h3>
               </div>
             ))}
           </div>
@@ -317,22 +317,22 @@ function App() {
       </section>
 
       {/* Shop Diamonds by Shape */}
-      <section className="py-16 px-4 bg-gray-50">
+      <section className="py-8 sm:py-12 lg:py-16 px-4 bg-gray-50">
         <div className="max-w-7xl mx-auto">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div>
-              <h2 className="text-3xl font-light text-gray-900 mb-8 tracking-wide" style={{ fontFamily: 'Georgia, serif' }}>Shop Diamonds by Shape</h2>
-              <div className="flex justify-center mb-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+            <div className="text-center lg:text-left">
+              <h2 className="text-2xl sm:text-3xl font-light text-gray-900 mb-6 sm:mb-8 tracking-wide" style={{ fontFamily: 'Georgia, serif' }}>Shop Diamonds by Shape</h2>
+              <div className="flex justify-center mb-6 sm:mb-8">
                 <img 
                   id="main-diamond-image"
                   src="/Shop Diamonds by Shape/BIG.webp" 
                   alt="Diamond Ring"
-                  className="w-48 h-48 object-cover"
+                  className="w-32 h-32 sm:w-40 sm:h-40 lg:w-48 lg:h-48 object-cover"
                 />
               </div>
             </div>
             
-            <div className="grid grid-cols-5 gap-6">
+            <div className="grid grid-cols-3 sm:grid-cols-4 lg:grid-cols-5 gap-4 sm:gap-6">
               {[
                 { name: 'Oval', image: '/Shop Diamonds by Shape/1.webp' },
                 { name: 'Round', image: '/Shop Diamonds by Shape/2.webp' },
@@ -357,14 +357,14 @@ function App() {
                     if (mainImage) mainImage.src = '/Shop Diamonds by Shape/BIG.webp';
                   }}
                 >
-                  <div className="w-16 h-16 mx-auto bg-white rounded-full shadow-lg mb-3 flex items-center justify-center group-hover:shadow-xl transition-shadow overflow-hidden">
+                  <div className="w-12 h-12 sm:w-14 sm:h-14 lg:w-16 lg:h-16 mx-auto bg-white rounded-full shadow-lg mb-2 sm:mb-3 flex items-center justify-center group-hover:shadow-xl transition-shadow overflow-hidden">
                     <img 
                       src={shape.image}
                       alt={shape.name}
-                      className="w-12 h-12 object-cover rounded-full"
+                      className="w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 object-cover rounded-full"
                     />
                   </div>
-                  <p className="text-xs text-gray-700 group-hover:text-gray-900 transition-colors font-light">{shape.name}</p>
+                  <p className="text-xs text-gray-700 group-hover:text-gray-900 transition-colors font-light text-center">{shape.name}</p>
                 </div>
               ))}
             </div>
@@ -373,12 +373,12 @@ function App() {
       </section>
 
       {/* Popular Engagement Rings */}
-      <section className="py-16 px-4">
+      <section className="py-8 sm:py-12 lg:py-16 px-4">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl font-light text-gray-900 mb-4 tracking-wide" style={{ fontFamily: 'Georgia, serif' }}>Popular Engagement Rings</h2>
-          <p className="text-gray-600 mb-12 font-light">Artistry and craftsmanship in every detail.</p>
+          <h2 className="text-2xl sm:text-3xl font-light text-gray-900 mb-4 tracking-wide text-center" style={{ fontFamily: 'Georgia, serif' }}>Popular Engagement Rings</h2>
+          <p className="text-gray-600 mb-8 sm:mb-12 font-light text-center">Artistry and craftsmanship in every detail.</p>
           
-          <div className="grid md:grid-cols-4 gap-8 mb-16">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 lg:gap-8 mb-8 sm:mb-12 lg:mb-16">
             {[
               { name: 'Solitaire Rings', image: '/Popular Engagement Rings/1.avif' },
               { name: 'Nature Inspired Rings', image: '/Popular Engagement Rings/2.avif' },
@@ -386,28 +386,28 @@ function App() {
               { name: 'Bridal Sets', image: '/Popular Engagement Rings/4.avif' }
             ].map((item, index) => (
               <div key={index} className="group cursor-pointer">
-                <div className="h-64 bg-gray-100 rounded-lg mb-4 overflow-hidden">
+                <div className="h-48 sm:h-56 lg:h-64 bg-gray-100 rounded-lg mb-4 overflow-hidden">
                   <img 
                     src={item.image} 
                     alt={item.name}
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                   />
                 </div>
-                <h3 className="font-normal text-gray-900 group-hover:text-gray-600 transition-colors">{item.name}</h3>
+                <h3 className="font-normal text-gray-900 group-hover:text-gray-600 transition-colors text-sm sm:text-base text-center">{item.name}</h3>
               </div>
             ))}
           </div>
           
-          <div className="bg-gray-50 p-8 rounded-lg">
-            <h3 className="text-2xl font-light text-gray-900 mb-8 text-center tracking-wide" style={{ fontFamily: 'Georgia, serif' }}>Our Must-Have Rings</h3>
-            <div className="grid md:grid-cols-2 gap-8">
+          <div className="bg-gray-50 p-4 sm:p-6 lg:p-8 rounded-lg">
+            <h3 className="text-xl sm:text-2xl font-light text-gray-900 mb-6 sm:mb-8 text-center tracking-wide" style={{ fontFamily: 'Georgia, serif' }}>Our Must-Have Rings</h3>
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8">
               <div className="relative">
                 <div className="absolute top-8 left-8 z-10">
                   <button className="bg-gray-900 text-white px-6 py-2 text-sm font-normal tracking-wide hover:bg-gray-800 transition-colors">
                     Shop Now
                   </button>
                 </div>
-                <div className="h-96 bg-gray-100 rounded-lg overflow-hidden">
+                <div className="h-64 sm:h-80 lg:h-96 bg-gray-100 rounded-lg overflow-hidden">
                   <img 
                     src="/Our Must-Have Rings/1.webp" 
                     alt="Must-Have Rings"
@@ -415,9 +415,9 @@ function App() {
                   />
                 </div>
               </div>
-              <div className="grid grid-cols-2 gap-4">
+              <div className="grid grid-cols-2 gap-3 sm:gap-4">
                 <div className="space-y-4">
-                  <div className="h-44 bg-gray-100 rounded-lg overflow-hidden">
+                  <div className="h-32 sm:h-40 lg:h-44 bg-gray-100 rounded-lg overflow-hidden">
                     <img 
                       src="/Our Must-Have Rings/2.webp" 
                       alt="Eternity Rings"
@@ -471,54 +471,54 @@ function App() {
       </section>
 
       {/* 20 Years of Yes */}
-      <section className="py-16 px-4">
+      <section className="py-8 sm:py-12 lg:py-16 px-4">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl font-light text-gray-900 mb-12 tracking-wide" style={{ fontFamily: 'Georgia, serif' }}>20 Years of Yes</h2>
+          <h2 className="text-2xl sm:text-3xl font-light text-gray-900 mb-8 sm:mb-12 tracking-wide text-center" style={{ fontFamily: 'Georgia, serif' }}>20 Years of Yes</h2>
           
-          <div className="grid md:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
             {/* Signature Collections */}
-            <div className="relative h-96 rounded-lg overflow-hidden text-white" style={{
+            <div className="relative h-64 sm:h-80 lg:h-96 rounded-lg overflow-hidden text-white" style={{
               backgroundImage: 'url("/20 Years of Yes/2.webp")',
               backgroundSize: 'cover',
               backgroundPosition: 'center'
             }}>
               <div className="absolute inset-0 bg-black bg-opacity-30"></div>
-              <div className="absolute bottom-8 left-8 right-8">
-                <h3 className="text-2xl font-light mb-2 tracking-wide" style={{ fontFamily: 'Georgia, serif' }}>Signature Collections</h3>
-                <p className="text-sm mb-6 opacity-90 font-light">The smallest details make the biggest impact.</p>
-                <button className="border border-white px-6 py-2 text-sm font-normal tracking-wide hover:bg-white hover:text-gray-900 transition-colors">
+              <div className="absolute bottom-4 sm:bottom-6 lg:bottom-8 left-4 sm:left-6 lg:left-8 right-4 sm:right-6 lg:right-8">
+                <h3 className="text-lg sm:text-xl lg:text-2xl font-light mb-2 tracking-wide" style={{ fontFamily: 'Georgia, serif' }}>Signature Collections</h3>
+                <p className="text-xs sm:text-sm mb-4 sm:mb-6 opacity-90 font-light">The smallest details make the biggest impact.</p>
+                <button className="border border-white px-4 sm:px-6 py-2 text-xs sm:text-sm font-normal tracking-wide hover:bg-white hover:text-gray-900 transition-colors">
                   Shop Now
                 </button>
               </div>
             </div>
             
             {/* Pacific Green Lab Diamonds */}
-            <div className="relative h-96 rounded-lg overflow-hidden text-white" style={{
+            <div className="relative h-64 sm:h-80 lg:h-96 rounded-lg overflow-hidden text-white" style={{
               backgroundImage: 'url("/20 Years of Yes/3.webp")',
               backgroundSize: 'cover',
               backgroundPosition: 'center'
             }}>
               <div className="absolute inset-0 bg-black bg-opacity-20"></div>
-              <div className="absolute bottom-8 left-8 right-8">
-                <h3 className="text-2xl font-light mb-2 tracking-wide" style={{ fontFamily: 'Georgia, serif' }}>Pacific Green Lab Diamonds</h3>
-                <p className="text-sm mb-6 opacity-90 font-light">A new and exclusive color.</p>
-                <button className="border border-white px-6 py-2 text-sm font-normal tracking-wide hover:bg-white hover:text-gray-900 transition-colors">
+              <div className="absolute bottom-4 sm:bottom-6 lg:bottom-8 left-4 sm:left-6 lg:left-8 right-4 sm:right-6 lg:right-8">
+                <h3 className="text-lg sm:text-xl lg:text-2xl font-light mb-2 tracking-wide" style={{ fontFamily: 'Georgia, serif' }}>Pacific Green Lab Diamonds</h3>
+                <p className="text-xs sm:text-sm mb-4 sm:mb-6 opacity-90 font-light">A new and exclusive color.</p>
+                <button className="border border-white px-4 sm:px-6 py-2 text-xs sm:text-sm font-normal tracking-wide hover:bg-white hover:text-gray-900 transition-colors">
                   Shop Now
                 </button>
               </div>
             </div>
             
             {/* 20th Anniversary Collection */}
-            <div className="relative h-96 rounded-lg overflow-hidden text-white" style={{
+            <div className="relative h-64 sm:h-80 lg:h-96 rounded-lg overflow-hidden text-white" style={{
               backgroundImage: 'url("/20 Years of Yes/assets2F5f1f4f3a446943da9da61d9fa5466411.webp")',
               backgroundSize: 'cover',
               backgroundPosition: 'center'
             }}>
               <div className="absolute inset-0 bg-black bg-opacity-20"></div>
-              <div className="absolute bottom-8 left-8 right-8">
-                <h3 className="text-2xl font-light mb-2 tracking-wide" style={{ fontFamily: 'Georgia, serif' }}>20th Anniversary Collection</h3>
-                <p className="text-sm mb-6 opacity-90 font-light">Celebrating two decades of design excellence.</p>
-                <button className="border border-white px-6 py-2 text-sm font-normal tracking-wide hover:bg-white hover:text-gray-900 transition-colors">
+              <div className="absolute bottom-4 sm:bottom-6 lg:bottom-8 left-4 sm:left-6 lg:left-8 right-4 sm:right-6 lg:right-8">
+                <h3 className="text-lg sm:text-xl lg:text-2xl font-light mb-2 tracking-wide" style={{ fontFamily: 'Georgia, serif' }}>20th Anniversary Collection</h3>
+                <p className="text-xs sm:text-sm mb-4 sm:mb-6 opacity-90 font-light">Celebrating two decades of design excellence.</p>
+                <button className="border border-white px-4 sm:px-6 py-2 text-xs sm:text-sm font-normal tracking-wide hover:bg-white hover:text-gray-900 transition-colors">
                   Shop Now
                 </button>
               </div>
@@ -528,10 +528,10 @@ function App() {
       </section>
 
       {/* We're Here for You, In Person and Online */}
-      <section className="py-16 px-4">
+      <section className="py-8 sm:py-12 lg:py-16 px-4">
         <div className="max-w-7xl mx-auto">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div className="h-96 rounded-lg overflow-hidden">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+            <div className="h-64 sm:h-80 lg:h-96 rounded-lg overflow-hidden">
               <img 
                 src="/below 20 years/1.jpg" 
                 alt="Jewelry Store Interior"
@@ -539,15 +539,15 @@ function App() {
               />
             </div>
             
-            <div>
-              <h2 className="text-3xl font-light text-gray-900 mb-6 tracking-wide" style={{ fontFamily: 'Georgia, serif' }}>We're Here for You, In Person and Online</h2>
-              <p className="text-gray-700 mb-8 font-light">Whether it's at a store near you or online, we curate your appointment just for you.</p>
+            <div className="text-center lg:text-left">
+              <h2 className="text-2xl sm:text-3xl font-light text-gray-900 mb-4 sm:mb-6 tracking-wide" style={{ fontFamily: 'Georgia, serif' }}>We're Here for You, In Person and Online</h2>
+              <p className="text-gray-700 mb-6 sm:mb-8 font-light">Whether it's at a store near you or online, we curate your appointment just for you.</p>
               
-              <div className="flex flex-col sm:flex-row gap-4">
-                <button className="border border-gray-900 px-8 py-3 text-gray-900 font-normal tracking-wide hover:bg-gray-900 hover:text-white transition-colors">
+              <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                <button className="border border-gray-900 px-6 sm:px-8 py-3 text-gray-900 font-normal tracking-wide hover:bg-gray-900 hover:text-white transition-colors text-sm sm:text-base">
                   Visit a Showroom
                 </button>
-                <button className="border border-gray-900 px-8 py-3 text-gray-900 font-normal tracking-wide hover:bg-gray-900 hover:text-white transition-colors">
+                <button className="border border-gray-900 px-6 sm:px-8 py-3 text-gray-900 font-normal tracking-wide hover:bg-gray-900 hover:text-white transition-colors text-sm sm:text-base">
                   Book a Virtual Appointment
                 </button>
               </div>
@@ -559,54 +559,54 @@ function App() {
 
 
       {/* We've Got You Covered */}
-      <section className="py-16 px-4 bg-teal-800 text-white">
+      <section className="py-8 sm:py-12 lg:py-16 px-4 bg-teal-800 text-white">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl font-light text-center mb-12 tracking-wide" style={{ fontFamily: 'Georgia, serif' }}>We've Got You Covered</h2>
+          <h2 className="text-2xl sm:text-3xl font-light text-center mb-8 sm:mb-12 tracking-wide" style={{ fontFamily: 'Georgia, serif' }}>We've Got You Covered</h2>
           
-          <div className="grid grid-cols-1 md:grid-cols-5 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6 sm:gap-8">
             <div className="text-center">
-              <div className="w-20 h-20 mx-auto mb-4 border-2 border-white rounded-full flex items-center justify-center">
-                <Truck className="w-8 h-8" />
+              <div className="w-16 h-16 sm:w-20 sm:h-20 mx-auto mb-3 sm:mb-4 border-2 border-white rounded-full flex items-center justify-center">
+                <Truck className="w-6 h-6 sm:w-8 sm:h-8" />
               </div>
-              <h3 className="text-sm font-normal tracking-wide mb-2">FREE SHIPPING & RETURNS</h3>
+              <h3 className="text-xs sm:text-sm font-normal tracking-wide mb-2">FREE SHIPPING & RETURNS</h3>
             </div>
             
             <div className="text-center">
-              <div className="w-20 h-20 mx-auto mb-4 border-2 border-white rounded-full flex items-center justify-center">
-                <Shield className="w-8 h-8" />
+              <div className="w-16 h-16 sm:w-20 sm:h-20 mx-auto mb-3 sm:mb-4 border-2 border-white rounded-full flex items-center justify-center">
+                <Shield className="w-6 h-6 sm:w-8 sm:h-8" />
               </div>
-              <h3 className="text-sm font-normal tracking-wide mb-2">FREE LIFETIME WARRANTY</h3>
+              <h3 className="text-xs sm:text-sm font-normal tracking-wide mb-2">FREE LIFETIME WARRANTY</h3>
             </div>
             
             <div className="text-center">
-              <div className="w-20 h-20 mx-auto mb-4 border-2 border-white rounded-full flex items-center justify-center">
-                <MessageCircle className="w-8 h-8" />
+              <div className="w-16 h-16 sm:w-20 sm:h-20 mx-auto mb-3 sm:mb-4 border-2 border-white rounded-full flex items-center justify-center">
+                <MessageCircle className="w-6 h-6 sm:w-8 sm:h-8" />
               </div>
-              <h3 className="text-sm font-normal tracking-wide mb-2">24/7 CUSTOMER SUPPORT</h3>
+              <h3 className="text-xs sm:text-sm font-normal tracking-wide mb-2">24/7 CUSTOMER SUPPORT</h3>
             </div>
             
             <div className="text-center">
-              <div className="w-20 h-20 mx-auto mb-4 border-2 border-white rounded-full flex items-center justify-center">
-                <Diamond className="w-8 h-8" />
+              <div className="w-16 h-16 sm:w-20 sm:h-20 mx-auto mb-3 sm:mb-4 border-2 border-white rounded-full flex items-center justify-center">
+                <Diamond className="w-6 h-6 sm:w-8 sm:h-8" />
               </div>
-              <h3 className="text-sm font-normal tracking-wide mb-2">LIFETIME DIAMOND UPGRADE</h3>
+              <h3 className="text-xs sm:text-sm font-normal tracking-wide mb-2">LIFETIME DIAMOND UPGRADE</h3>
             </div>
             
             <div className="text-center">
-              <div className="w-20 h-20 mx-auto mb-4 border-2 border-white rounded-full flex items-center justify-center">
-                <RotateCcw className="w-8 h-8" />
+              <div className="w-16 h-16 sm:w-20 sm:h-20 mx-auto mb-3 sm:mb-4 border-2 border-white rounded-full flex items-center justify-center">
+                <RotateCcw className="w-6 h-6 sm:w-8 sm:h-8" />
               </div>
-              <h3 className="text-sm font-normal tracking-wide mb-2">FREE 60-DAY RESIZING</h3>
+              <h3 className="text-xs sm:text-sm font-normal tracking-wide mb-2">FREE 60-DAY RESIZING</h3>
             </div>
           </div>
         </div>
       </section>
 
       {/* Mission Section */}
-      <section className="py-16 px-4 bg-gray-50">
+      <section className="py-8 sm:py-12 lg:py-16 px-4 bg-gray-50">
         <div className="max-w-7xl mx-auto">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div className="h-96 bg-gradient-to-br from-blue-100 to-blue-200 rounded-lg overflow-hidden">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+            <div className="h-64 sm:h-80 lg:h-96 bg-gradient-to-br from-blue-100 to-blue-200 rounded-lg overflow-hidden">
               <img 
                 src="/We've Got You Covered/1.jpg" 
                 alt="Mission Image"
@@ -614,16 +614,16 @@ function App() {
               />
             </div>
             
-            <div>
-              <p className="text-sm text-gray-600 mb-4 font-light tracking-wide">20 YEARS OF OUR MISSION</p>
-              <p className="text-lg text-gray-800 mb-8 font-light leading-relaxed" style={{ fontFamily: 'Georgia, serif' }}>
+            <div className="text-center lg:text-left">
+              <p className="text-xs sm:text-sm text-gray-600 mb-4 font-light tracking-wide">20 YEARS OF OUR MISSION</p>
+              <p className="text-base sm:text-lg text-gray-800 mb-6 sm:mb-8 font-light leading-relaxed" style={{ fontFamily: 'Georgia, serif' }}>
                 From our pioneering diamond standards to our unmatched transparency, we're redefining what it means to design, craft, and experience jewelry that makes a real difference.
               </p>
-              <button className="text-gray-800 font-normal tracking-wide hover:text-gray-600 transition-colors border-b border-gray-800 hover:border-gray-600 mb-8">
+              <button className="text-gray-800 font-normal tracking-wide hover:text-gray-600 transition-colors border-b border-gray-800 hover:border-gray-600 mb-6 sm:mb-8 text-sm sm:text-base">
                 Learn More
               </button>
               
-              <div className="grid grid-cols-3 gap-4">
+              <div className="grid grid-cols-3 gap-3 sm:gap-4">
                 <div className="aspect-square bg-gray-100 rounded-lg overflow-hidden">
                   <img 
                     src="/We've Got You Covered/2.jpg" 
@@ -801,19 +801,19 @@ function App() {
           </div>
           
           {/* Bottom Footer */}
-          <div className="border-t border-gray-200 pt-6">
-            <div className="flex flex-col md:flex-row justify-between items-center text-xs text-gray-500">
-              <div className="flex flex-wrap items-center gap-4 mb-4 md:mb-0">
+          <div className="border-t border-gray-200 pt-4 sm:pt-6">
+            <div className="flex flex-col sm:flex-row justify-between items-center text-xs text-gray-500 gap-4">
+              <div className="flex flex-wrap justify-center sm:justify-start items-center gap-2 sm:gap-4">
                 <span>©2025 Brilliant Earth, LLC</span>
                 <a href="#" className="hover:text-gray-700">Terms & Conditions</a>
                 <a href="#" className="hover:text-gray-700">Privacy Policy</a>
                 <a href="#" className="hover:text-gray-700">Interest-Based Ads</a>
-                <a href="#" className="hover:text-gray-700">Do Not Sell or Share My Personal Information</a>
+                <a href="#" className="hover:text-gray-700 hidden sm:inline">Do Not Sell or Share My Personal Information</a>
                 <a href="#" className="hover:text-gray-700">CA Transparency Act</a>
                 <a href="#" className="hover:text-gray-700">CPRA</a>
                 <a href="#" className="hover:text-gray-700">Site Map</a>
               </div>
-              <div className="flex items-center gap-2">
+              <div className="flex items-center gap-1 sm:gap-2 text-xs">
                 <span>AUD</span>
                 <span>|</span>
                 <span>CAD</span>
