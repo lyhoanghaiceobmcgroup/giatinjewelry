@@ -3,6 +3,7 @@ import { Search, User, Heart, ShoppingBag, Phone, MapPin, Video, Truck, Shield, 
 
 function App() {
   const [isEngagementDropdownOpen, setIsEngagementDropdownOpen] = useState(false);
+  const [isWeddingDropdownOpen, setIsWeddingDropdownOpen] = useState(false);
 
   return (
     <div className="min-h-screen bg-white">
@@ -152,7 +153,96 @@ function App() {
                 </div>
               )}
             </div>
-            <a href="#" className="hover:text-gray-900 transition-colors">WEDDING RINGS</a>
+            <div 
+              className="relative"
+              onMouseEnter={() => setIsWeddingDropdownOpen(true)}
+              onMouseLeave={() => setIsWeddingDropdownOpen(false)}
+            >
+              <a href="#" className="hover:text-gray-900 transition-colors">
+                WEDDING RINGS
+              </a>
+              
+              {/* Wedding Rings Dropdown Menu */}
+              {isWeddingDropdownOpen && (
+                <div className="absolute top-full left-0 right-0 mt-2 w-screen bg-white border-t border-gray-200 shadow-lg z-50" style={{marginLeft: 'calc(-50vw + 50%)', marginRight: 'calc(-50vw + 50%)'}}>
+                    <div className="w-full grid grid-cols-4 gap-8 px-4 py-8">
+                    {/* Women's Wedding Rings */}
+                    <div>
+                      <h3 className="text-sm font-semibold text-gray-900 mb-4 tracking-wide">WOMEN</h3>
+                      <ul className="space-y-2 text-sm text-gray-600">
+                        <li><a href="#" className="hover:text-gray-900 transition-colors">Women's Wedding Rings</a></li>
+                        <li><a href="#" className="hover:text-gray-900 transition-colors">Find My Matching Wedding Ring</a></li>
+                        <li><a href="#" className="hover:text-gray-900 transition-colors">Design Your Own Ring Stack</a></li>
+                        <li><a href="#" className="hover:text-gray-900 transition-colors">Diamond Rings</a></li>
+                        <li><a href="#" className="hover:text-gray-900 transition-colors">Wedding Ring Sets</a></li>
+                        <li><a href="#" className="hover:text-gray-900 transition-colors">Eternity Rings</a></li>
+                        <li><a href="#" className="hover:text-gray-900 transition-colors">Anniversary Rings</a></li>
+                        <li><a href="#" className="hover:text-gray-900 transition-colors">Curved Rings</a></li>
+                      </ul>
+                      <a href="#" className="text-xs text-teal-600 hover:text-teal-800 transition-colors mt-2 inline-block">Shop All Wedding Rings &gt;</a>
+                    </div>
+                    
+                    {/* Men's Wedding Rings */}
+                    <div>
+                      <h3 className="text-sm font-semibold text-gray-900 mb-4 tracking-wide">MEN</h3>
+                      <ul className="space-y-2 text-sm text-gray-600">
+                        <li><a href="#" className="hover:text-gray-900 transition-colors">Men's Wedding Bands</a></li>
+                        <li><a href="#" className="hover:text-gray-900 transition-colors">Classic Bands</a></li>
+                        <li><a href="#" className="hover:text-gray-900 transition-colors">Men's Engagement Rings</a></li>
+                        <li><a href="#" className="hover:text-gray-900 transition-colors">Customize Your Own Ring</a></li>
+                        <li><a href="#" className="hover:text-gray-900 transition-colors">Diamond Bands</a></li>
+                        <li><a href="#" className="hover:text-gray-900 transition-colors">Matte Bands</a></li>
+                        <li><a href="#" className="hover:text-gray-900 transition-colors">Hammered Bands</a></li>
+                        <li><a href="#" className="hover:text-gray-900 transition-colors">Men's Jewelry</a></li>
+                      </ul>
+                    </div>
+                    
+                    {/* Women's by Metal & Featured */}
+                    <div>
+                      <h3 className="text-sm font-semibold text-gray-900 mb-4 tracking-wide">WOMEN'S BY METAL</h3>
+                      <ul className="space-y-2 text-sm text-gray-600">
+                        <li><a href="#" className="hover:text-gray-900 transition-colors">Platinum</a></li>
+                        <li><a href="#" className="hover:text-gray-900 transition-colors">Yellow Gold</a></li>
+                        <li><a href="#" className="hover:text-gray-900 transition-colors">White Gold</a></li>
+                        <li><a href="#" className="hover:text-gray-900 transition-colors">Rose Gold</a></li>
+                      </ul>
+                      
+                      <h4 className="text-sm font-semibold text-gray-900 mb-3 mt-6 tracking-wide">MEN'S BY METAL</h4>
+                      <ul className="space-y-2 text-sm text-gray-600">
+                        <li><a href="#" className="hover:text-gray-900 transition-colors">Platinum</a></li>
+                        <li><a href="#" className="hover:text-gray-900 transition-colors">Yellow Gold</a></li>
+                        <li><a href="#" className="hover:text-gray-900 transition-colors">White Gold</a></li>
+                        <li><a href="#" className="hover:text-gray-900 transition-colors">Tungsten</a></li>
+                        <li><a href="#" className="hover:text-gray-900 transition-colors">Tantalum</a></li>
+                        <li><a href="#" className="hover:text-gray-900 transition-colors">Rose Gold</a></li>
+                      </ul>
+                    </div>
+                    
+                    {/* Featured & Wedding Band Guides */}
+                    <div>
+                      <h3 className="text-sm font-semibold text-gray-900 mb-4 tracking-wide">FEATURED</h3>
+                      <ul className="space-y-2 text-sm text-gray-600">
+                        <li><a href="#" className="hover:text-gray-900 transition-colors">Top 20 Women's Rings</a></li>
+                        <li><a href="#" className="hover:text-gray-900 transition-colors">Top 20 Men's Bands</a></li>
+                        <li><a href="#" className="hover:text-gray-900 transition-colors">Couple Rings</a></li>
+                        <li><a href="#" className="hover:text-gray-900 transition-colors">Gender Neutral Rings</a></li>
+                        <li><a href="#" className="hover:text-gray-900 transition-colors">Signature Collections</a></li>
+                        <li><a href="#" className="hover:text-gray-900 transition-colors">20th Anniversary Collection</a></li>
+                      </ul>
+                      
+                      <h4 className="text-sm font-semibold text-gray-900 mb-3 mt-6 tracking-wide">WEDDING BAND GUIDES</h4>
+                      <ul className="space-y-2 text-sm text-gray-600">
+                        <li><a href="#" className="hover:text-gray-900 transition-colors">Women's Wedding Band Style Guide</a></li>
+                        <li><a href="#" className="hover:text-gray-900 transition-colors">Men's Wedding Band Style Guide</a></li>
+                        <li><a href="#" className="hover:text-gray-900 transition-colors">Ring Engraving Guide</a></li>
+                        <li><a href="#" className="hover:text-gray-900 transition-colors">2025 Wedding Ring Trends</a></li>
+                        <li><a href="#" className="hover:text-gray-900 transition-colors">Wedding Ring Budget Guide</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              )}
+            </div>
             <a href="#" className="hover:text-gray-900 transition-colors">DIAMONDS</a>
             <a href="#" className="hover:text-gray-900 transition-colors">GEMSTONES</a>
             <a href="#" className="hover:text-gray-900 transition-colors">JEWELRY</a>
