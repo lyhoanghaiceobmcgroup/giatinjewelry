@@ -197,7 +197,7 @@ function App() {
           <h2 className="text-3xl font-light text-gray-900 mb-4 tracking-wide" style={{ fontFamily: 'Georgia, serif' }}>Shop Jewelry by Category</h2>
           <p className="text-gray-600 mb-12 font-light">Thoughtfully designed collections for the big day and every day.</p>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-6 gap-6">
             {[
               { name: 'Engagement Rings', image: '/ShopJewelrybyCategory/1.JPG', hoverImage: '/ShopJewelrybyCategory/1a.JPG' },
               { name: "Women's Wedding Rings", image: '/ShopJewelrybyCategory/2.JPG', hoverImage: '/ShopJewelrybyCategory/2a.jpg' },
@@ -443,7 +443,7 @@ function App() {
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="h-96 rounded-lg overflow-hidden">
               <img 
-                src="/below 20 years/1.avif" 
+                src="/below 20 years/1.jpg" 
                 alt="Jewelry Store Interior"
                 className="w-full h-full object-cover"
               />
