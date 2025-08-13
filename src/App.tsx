@@ -32,7 +32,7 @@ function App() {
             
             {/* Center - Logo */}
             <div className="flex items-center">
-              <h1 className="text-xl font-normal tracking-[0.15em] text-gray-900" style={{ fontFamily: 'system-ui, -apple-system, sans-serif' }}>GIA TÍN JEWELRY</h1>
+              <h1 className="text-xl font-normal tracking-[0.15em] text-gray-900" style={{ fontFamily: 'system-ui, -apple-system, sans-serif' }}>GAJ JEWELRY</h1>
               <div className="ml-1 text-gray-400">|</div>
               <span className="ml-2 text-sm text-gray-600 font-light" style={{ fontFamily: 'Georgia, serif', fontStyle: 'italic' }}>20 Years of Yes</span>
             </div>
